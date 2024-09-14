@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <style>
+        body{
+            height: 1900px;
+        }
+        .sticky{
+            position: sticky;
+            top:0;
+            left:0;
+            background-color: black;
+        }
+        .box{
+            height:200px;
+            background-color: red;
+            width:200px;
+            position:fixed;
+            bottom:0px;
+            transition: 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <img src="https://broadwayinfosys.com/uploads/logo/1667276403.new_broadway_logo.svg" class="imc me-5" height="60px" width="60px" alt="">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <button class=" btn btn-primary " id="a" onclick="abc()">display the nav</button>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 " id="b" style="display:none">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <h1>tag</h1>
+    <h1>suyog</h1>
+    <div class="demo">
+        this is Class
+    </div>
+    <div id="demo">
+        This is ID
+    </div>
+    <div class="btn btn-primary" onclick="document.getElementsByTagName('h1')[0].style.color='red' ">change text color
+    </div>
+    <div class="btn btn-primary" onclick="document.getElementsByTagName('h1')[0].style.backgroundColor='black'">change
+        background color</div>
+    <div class="btn btn-primary" onclick="document.getElementsByTagName('h1')[0].style.fontSize='32px' ">change font
+        size</div>
+    <div class="btn btn-primary" onclick="document.getElementsByTagName('h1')[0].style.marginLeft='302px' ">change left
+        margin</div>
+
+
+
+    <section class="new d-flex justify-content-center gap-5 p-5">
+        <h3>HEllo</h1>
+            <button class="btn btn-danger text-light"
+                onclick="document.querySelector('h3').classList.add('aa')">addclass</button>
+            <button class=" btn btn-danger text-light"
+                onclick="document.querySelector('h3').classList.remove('aa')">Removeclass</button>
+            <button class="btn btn-danger text-light"
+                onclick="document.querySelector('h3').classList.toggle('aa')">toggle class Name</button>
+
+    </section>
+    <section>
+        <div class="box" style="display:none">
+            hello
+            <div class="btn btn-primary text-light cr">cross</div>
+        </div>
+    </section>
+    
+    <script>
+        var a;
+        a = document.getElementsByTagName('h1')[0].innerHTML
+        console.log(a)
+        //as a object linxa so indexing garera first h1 leko
+        a = document.getElementsByClassName('demo')[0].innerText
+        console.log(a);
+        a = document.getElementById('demo').innerText
+        console.log(a);
+    </script>
+    <script>
+        function abc() {
+
+            if (
+                document.getElementById('b').style.display == "none") {
+
+
+                document.getElementById('a').innerHTML = "off"
+                document.getElementById('b').style.display = "flex"
+            }
+            else {
+                document.getElementById('a').innerHTML = "On"
+                document.getElementById('b').style.display = "none"
+            }
+
+        }
+
+    </script>
+    <script>
+        window.addEventListener('scroll',function(){
+            let a=scrollY;
+            if(a>60){
+                document.querySelector('.navbar').classList.add('sticky')//navbar ma sticky vanni class  add gardini
+                document.querySelector('.imc').src="https://broadwayinfosys.com/uploads/logo/1667276492.logo-design-small.svg"
+                document.querySelector('.box').style.display='block'
+            }
+            else{
+                document.querySelector('.navbar').classList.remove('sticky')
+
+                document.querySelector('.imc').src="https://broadwayinfosys.com/uploads/logo/1667276403.new_broadway_logo.svg"
+                document.querySelector('.box').style.display='none'
+
+            }
+        })
+        document.querySelector('.cr').addEventListener('click', function(){
+            alert('he')
+           
+        document.querySelector('section').removeChild(document.querySelector('.box'));   //deko parent bata child hataidini     
+        })
+       
+    </script>
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var age=[20,12,232,232,32,32]
+        var filterdisplay=age.filter(a=> a>=25)//a chai parameter ho junle chai euta euta array ko content linxa
+        console.log(filterdisplay)
+        var finddisplay=age.find(a=> a>=25)
+        console.log(finddisplay)
+        var mapdisplay=age.map(a=> a+5)
+        
+
+        arr=[1,2,3,4,5,6,7,8,9]
+        console.log(arr.filter(a=>a%2==0))
+
+        //array vitra object 
+        var product=[{id:1,title:"hELLO"},
+        {id:1,title:"hELLO"},
+        {id:2,title:"hELLO s"},
+        {id:3,title:"hELLO y"}
+    ]
+        var qq=product.map((a)=>a.title)
+        //map le one by one print gardinxxa
+        console.log(qq)
+        var ar=product.filter((a)=>a.title="hELLO")
+        console.log(ar)
+
+    </script>
+</body>
+</html>

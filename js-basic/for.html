@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num=[21,23,23,34,34]
+        for (let i=0;i<num.length;i++){
+            console.log(i);
+        }//yo chai purano js code vayo
+
+        num.forEach((element)=>{
+            console.log(element);
+        });
+        //for each vitra arrow function ko use gareko
+
+        let name="suyog";
+        let arr=Array.from(name)
+        console.log(arr)     ;  
+        /*normally getelemntsbyclassname object return 
+        garxa.so Array.form(object) le object lai array ma change gardinxa
+        */
+        
+        
+        for(let k of num){
+            console.log(k)  //elle chai array ko value return garxa
+        }
+
+
+        for(let l in num){
+            console.log(l)//elle chai array ko key return garxa..0,1,2,..
+
+        }
+
+    </script>
+</body>
+</html>

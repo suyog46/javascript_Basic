@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=21;
+        
+    function abc(x){
+        console.log(x);
+        
+    }
+    //ehi maathi ko function lai arrow function ma lekhda
+    cde=(y)=>{
+        console.log(y)
+    }
+    cde=(y)=>console.log(y)
+    //yo ajhai shortcut vayo ..ehi return gardinxa
+
+    /*
+    without function ko nam define garnu paryo vani
+    function(){}.....yo chai function use garda
+    ()=>{}.........yo chai arrow use garda
+    */
+   abc(a);
+   cde(a);
+
+    let obj1={
+        greet:"hello",
+        name:['suyog','ram','shyam','hari'],
+        greeting(){    //object vitra greeting function call gareko
+            this.name.forEach((student)=>{//object vitra ko function vitra feri arrow function call garera this use garyo vani parent ko parent lai pointgarxa 
+                console.log(this.greet+student);
+            });
+        }
+        // greeting(){    //object vitra greeting function call gareko
+        //     this.name.forEach((student)=>{    //object vitra ko function vitra feri normal function call garera this use garyo vani chai parent ko parent lai pointgardaina 
+        //         console.log(this.greet+student)
+        //     });
+        // }
+
+    };
+    
+    </script>
+    
+</body>
+</html>

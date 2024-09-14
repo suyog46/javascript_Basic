@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>this is demo</h1>
+    <button>
+        hide
+    </button>
+    <img class="ig" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbs6mRrRGJS3VekiUCxoMnsz49VXzUITUPxw&usqp=CAU" alt="" width="200px" height="200px">
+    <button class="b1" onclick= "b(this)">off</button>
+    <script >
+        
+        document.querySelector('button').addEventListener('click',abc)
+        function abc(){
+            
+            document.querySelector('h1').style.display="hidden"
+
+        }
+        function b(x){
+            x.innerHTML='on';
+            document.querySelector('.ig').src="https://as2.ftcdn.net/v2/jpg/00/77/99/99/1000_F_77999958_tZYT7xWlSJewLgsMYY3CrAWvYITlWYTF.jpg"
+        }
+    </script>
+</body>
+</html>

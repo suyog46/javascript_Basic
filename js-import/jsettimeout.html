@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width:100px;
+            height:100px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="main">
+        <h1>website</h1>
+    </div>
+    <script>
+        setTimeout(abc,2000)//abc vanni function lai 2000 ms paxi call gareko
+        function abc(){
+            document.querySelector('.box').style.display="none"
+            document.querySelector('.main').style.display="block"
+
+        }
+
+//function vitra 
+
+
+        function bc(a,b){//b le function recieve garxa
+            console.log("hello"+a);
+            b();//function vitra function print garna ko lagi 
+        }
+        function q(){
+            console.log("good morning")
+        }
+        bc("suyog",q)//arko function lai chai as a argument pass gareko
+    setTimeout(bc,1000,q)//dubai function 2 s paxi load hunxa4
+    </script>
+</body>
+</html>
